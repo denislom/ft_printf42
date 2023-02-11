@@ -10,3 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
+
+// # include <unistd.h>
+// # include <stddef.h>
+// # include <stdlib.h>
+#include <stdar.h>
+
+int	ft_printf(char *str, ...);
+
+#endif
