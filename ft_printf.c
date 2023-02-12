@@ -74,10 +74,28 @@ void	va_end(va_list argptr);
 void	copy(va_list dest, va_list src);
 	This macro initializes the argument pointer dest with the current values of src.
 */
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 int	ft_printf(char *str, ...)
 {
-	va_list	arglist;
-	va_start(arglist, first);
+	va_list	argptr;
+	int		i;
+	int		printed_chars;
 
-	while (arg )
+	i = 0;
+	printed_chars
+	va_start(argptr, last);
+	while (str[i])
+	{
+		if (str[i++] == '%')
+			//call another functions that will print corresponding char.
+		else
+			
+			printed_chars = printed_chars + 1;
+	}
+	return (printed_chars)
 }
