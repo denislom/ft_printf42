@@ -100,5 +100,6 @@ int	ft_printf(char *str, ...)
 			printed_chars = printed_chars + 1;
 		}
 	}
+	va_end(argptr);
 	return (printed_chars);
 }
