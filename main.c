@@ -6,8 +6,16 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:44:23 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/09 17:03:47 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/12 21:23:16 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*test gitu*/
+#include "ft_printf.c"
+#include "ft_printf.h"
+
+int	main(void)
+{
+	ft_printf(" ahoj fsd ");
+	return (0);
+}
+

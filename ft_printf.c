@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+//#include <ft_printf.h>
+#include "ft_printf.h"
 /*
 [1] FROM: PRINZ, Peter a Ulla KIRCH-PRINZ. C Pocket Reference. O'REILLY, 2003. ISBN 978-0-596-00436-1.
 1. declare an object of type va_list (named arglist)
@@ -87,16 +88,17 @@ int	ft_printf(char *str, ...)
 	int		printed_chars;
 
 	i = 0;
-	printed_chars
-	va_start(argptr, last);
+	printed_chars;
+	va_start(argptr, str);
 	while (str[i])
 	{
 		if (str[i++] == '%')
-			//call another functions that will print corresponding char.
+			i = i;
 		else
+		{
 			ft_putchar(str[i]);
 			printed_chars = printed_chars + 1;
-		i++;
+		}
 	}
-	return (printed_chars)
+	return (printed_chars);
 }
