@@ -94,8 +94,9 @@ int	ft_printf(char *str, ...)
 		if (str[i++] == '%')
 			//call another functions that will print corresponding char.
 		else
-			
+			ft_putchar(str[i]);
 			printed_chars = printed_chars + 1;
+		i++;
 	}
 	return (printed_chars)
 }
