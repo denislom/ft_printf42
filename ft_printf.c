@@ -12,7 +12,7 @@
 
 #include <ft_printf.h>
 /*
-FROM: PRINZ, Peter a Ulla KIRCH-PRINZ. C Pocket Reference. O'REILLY, 2003. ISBN 978-0-596-00436-1.
+[1] FROM: PRINZ, Peter a Ulla KIRCH-PRINZ. C Pocket Reference. O'REILLY, 2003. ISBN 978-0-596-00436-1.
 1. declare an object of type va_list (named arglist)
 	-va_list: the optional arguments are accessed through va_list
 2. Invoke the macro va_start to prepare arglist object to
@@ -27,7 +27,7 @@ FROM: PRINZ, Peter a Ulla KIRCH-PRINZ. C Pocket Reference. O'REILLY, 2003. ISBN 
 	control to the caller.
 	- The only parametre of va_end is the arglist object.
 
-FROM: PRINZ, Peter a Tony. C in a Nutshell: THE DEFINITIVE REFERENCE.
+[2] FROM: PRINZ, Peter a Tony. C in a Nutshell: THE DEFINITIVE REFERENCE.
 2nd Edition. Sebastopol: O'REILLY, 2016. ISBN 978-1-491-90475-6.
 EXAMPLE OF PRINTF
 int	score = 120;
@@ -47,6 +47,32 @@ va_end(): macro, cleans up after the use of a va+list object. A function with a 
 	of va_start() or va_copy().
 
 Macros va_copy() and va_end() may also be implemented as functions.
+
+Variadic functions (functions with a variable number of arguments) require a fixed number
+of mandatory arguments (at least 1), followed by a variable number of optional arguments.
+Examples are printf(), scanf().
+The number of optional arguments is either determined by the values of the mandatory arguments
+or by a special value that terminates the list of optional arguments.
+
+Printf() has one mandatory argument of format string (char *str).
+The conversion specifiers in the format string determine the number and the types of the
+the optional arguments.
+int	ft_printf(char *str, ...)
+... stands for the optional arguments.
+
+void	va_start(va_list, argptr, lastparam);
+	This macro initializes the argument pointer argptr with the position of the first optional
+	argument. The macros's second argument must be the name of the function's last named 
+	parameter. This macro must be called before the function can use the optional arguments.
+type	va_arg(va_list argptr, type);
+	This macro expands to yield the optional argument currently referenced by argptr,
+	and also advances argptr to reference the next argument in the list.
+	The second argument of the macro va_arg is the type of the argument being read.
+void	va_end(va_list argptr);
+	Call it when you have finished using an argument pointer. Necessary before
+	reinitializing an argument pointer by va_start() or va_copy().
+void	copy(va_list dest, va_list src);
+	This macro initializes the argument pointer dest with the current values of src.
 */
 int	ft_printf(char *str, ...)
 {
