@@ -97,6 +97,15 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+
+void	print_variable(va_list argptr, char format)
+{
+	if (format == 'c')
+	{
+		ft_putchar(va_arg(argptr, int));
+	}
+}
+
 int	ft_printf(char *str, ...)
 {
 	va_list	argptr;
@@ -108,12 +117,17 @@ int	ft_printf(char *str, ...)
 	va_start(argptr, str);
 	while (str[i])
 	{
-		if (str[i++] == '%')
-			i = i;
+		if (str[i] == '%')
+		{
+			print_variable(argptr, str[i+1]);
+			printed_chars = printed_chars + 1;
+			i = i + 2;
+		}
 		else
 		{
 			ft_putchar(str[i]);
 			printed_chars = printed_chars + 1;
+			i++;
 		}
 	}
 	va_end(argptr);

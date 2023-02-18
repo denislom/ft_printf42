@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:44:23 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/13 17:22:20 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/18 13:47:57 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 //test
 int	main(void)
 {
-	ft_printf(" ahoj fsd ");
+	char	charac = 'd';
+	
+	ft_printf("%c ahoj fsd ", charac);
 	return (0);
 }
