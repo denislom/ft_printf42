@@ -16,10 +16,11 @@
 # include <stdint.h>
 # include <unistd.h>
 // # include <stddef.h>
-// # include <stdlib.h>
+# include <stdlib.h>
 # include <stdarg.h>
 
 int	ft_printf(char *str, ...);
 int	ft_putstr(char	*str);
+int	print_pointer(uintptr_t num);
 
 #endif

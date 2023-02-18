@@ -108,7 +108,7 @@ int	print_variable(va_list argptr, char format)
 	if (format == 's')
 		num_char = ft_putstr(va_arg(argptr, char *));
 	if (format == 'p')
-		num_char = ft_putstr(va_arg(argptr, char *));
+		num_char = print_pointer(va_arg(argptr, uintptr_t));
 	return (num_char);
 }
 
