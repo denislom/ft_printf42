@@ -19,5 +19,6 @@
 # include <stdarg.h>
 
 int	ft_printf(char *str, ...);
+int	ft_putstr(char	*str);
 
 #endif

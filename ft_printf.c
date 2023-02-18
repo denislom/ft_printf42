@@ -92,18 +92,23 @@ void	copy(va_list dest, va_list src);
 	values of src.
 */
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
 
 
-void	print_variable(va_list argptr, char format)
+int	print_variable(va_list argptr, char format)
 {
+	int	num_char;
+
+	num_char = 0;
 	if (format == 'c')
-	{
-		ft_putchar(va_arg(argptr, int));
-	}
+		num_char = ft_putchar(va_arg(argptr, int));
+	if (format == 's')
+		num_char = ft_putstr(va_arg(argptr, char *));
+	return (num_char);
 }
 
 int	ft_printf(char *str, ...)
