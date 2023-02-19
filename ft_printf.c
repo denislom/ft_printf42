@@ -109,6 +109,8 @@ int	print_variable(va_list argptr, char format)
 		num_char = ft_putstr(va_arg(argptr, char *));
 	if (format == 'p')
 		num_char = ft_print_pointer(va_arg(argptr, uintptr_t));
+	if (format == 'd')
+		num_char = ft_print_decimal_number(va_arg(argptr, int));
 	return (num_char);
 }
 
