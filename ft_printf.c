@@ -108,7 +108,7 @@ int	print_variable(va_list argptr, char format)
 	if (format == 's')
 		num_char = ft_putstr(va_arg(argptr, char *));
 	if (format == 'p')
-		num_char = print_pointer(va_arg(argptr, uintptr_t));
+		num_char = ft_print_pointer(va_arg(argptr, uintptr_t));
 	return (num_char);
 }
 
@@ -125,14 +125,12 @@ int	ft_printf(char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			print_variable(argptr, str[i + 1]);
-			printed_chars = printed_chars + 1;
+			printed_chars = print_variable(argptr, str[i + 1]) + 1;
 			i = i + 2;
 		}
 		else
 		{
-			ft_putchar(str[i]);
-			printed_chars = printed_chars + 1;
+			printed_chars = ft_putchar(str[i]) + 1;
 			i++;
 		}
 	}
