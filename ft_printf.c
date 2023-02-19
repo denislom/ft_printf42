@@ -127,12 +127,12 @@ int	ft_printf(char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			printed_chars = print_variable(argptr, str[i + 1]) + 1;
+			printed_chars = printed_chars + print_variable(argptr, str[i + 1]);
 			i = i + 2;
 		}
 		else
 		{
-			printed_chars = ft_putchar(str[i]) + 1;
+			printed_chars = printed_chars + ft_putchar(str[i]);
 			i++;
 		}
 	}
