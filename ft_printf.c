@@ -111,6 +111,8 @@ int	print_variable(va_list argptr, char format)
 		num_char = ft_print_pointer(va_arg(argptr, uintptr_t));
 	if (format == 'd' || format == 'i')
 		num_char = ft_print_decimal_number(va_arg(argptr, int));
+	if (format == 'u')
+		num_char = ft_print_unsigned_decimal(va_arg(argptr, unsigned int));
 	return (num_char);
 }
 
