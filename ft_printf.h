@@ -25,5 +25,6 @@ int		ft_print_pointer(uintptr_t num);
 char	*ft_itoa(int n);
 int		ft_print_decimal_number(int number);
 int		ft_print_decimal_number(int number);
+int ft_print_unsigned_decimal(unsigned int num);
 
 #endif
