@@ -26,6 +26,6 @@ char	*ft_itoa(int n);
 int		ft_print_decimal_number(int number);
 int		ft_print_decimal_number(int number);
 int		ft_print_unsigned_decimal(unsigned int num);
-int		ft_print_hexadecimal(int number, char format);
+// int		ft_print_hexadecimal(int number, char format);
 
 #endif
