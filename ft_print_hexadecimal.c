@@ -6,13 +6,13 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 22:51:14 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/27 22:53:26 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/28 00:06:14 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	hexadecimal_len(int number)
+static int	hexadecimal_len(unsigned int number)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	hexadecimal_len(int number)
 	return (len);
 }
 
-static char	*hexa_itoa(int number, char format)
+char	*hexa_itoa(unsigned int number, char format)
 {
 	int		len;
 	char	*hexa_number;
@@ -49,7 +49,7 @@ static char	*hexa_itoa(int number, char format)
 	return (hexa_number);
 }
 
-int	ft_print_hexadecimal(int number, char format)
+int	ft_print_hexadecimal(unsigned int number, char format)
 {
 	int		len;
 	char	*hexa_num;

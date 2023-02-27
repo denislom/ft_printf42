@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:44:23 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/27 23:33:39 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/28 00:03:13 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,15 @@ int	main(void)
 	ft_printf("print number: %d", number);
 	ft_printf("print number: %i", number);
 
-	// unsigned_number = 4294967295;
-	// ft_printf("print unsigned number: %u", unsigned_number);
+	unsigned_number = 4294967295;
+	ft_printf("print unsigned number: %u", unsigned_number);
 	hexadecimal_number = 12343443;
 	// ft_printf("print unsigned number: %x", unsigned_number);
+	printf ("_%x_\n", unsigned_number);
 	printf ("_%x_\n", hexadecimal_number);
 	ft_printf ("_%x_\n", hexadecimal_number);
+
+	// have to change print hexadecimal from int to unsigned int.
+	ft_printf ("_%x_\n", unsigned_number);
 	return (0);
 }
