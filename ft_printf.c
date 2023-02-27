@@ -113,8 +113,8 @@ int	print_variable(va_list argptr, char format)
 		num_char = ft_print_decimal_number(va_arg(argptr, int));
 	if (format == 'u')
 		num_char = ft_print_unsigned_decimal(va_arg(argptr, unsigned int));
-	// if (format == 'x' || 'X')
-	// 	num_char = ft_print_hexadecimal(va_arg(argptr, int), format);
+	if (format == 'x' || format == 'X')
+		num_char = ft_print_hexadecimal(va_arg(argptr, int), format);
 	return (num_char);
 }
 

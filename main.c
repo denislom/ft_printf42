@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:44:23 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/27 22:55:49 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/27 23:33:39 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ft_print_decimal_number.c"
 #include "ft_itoa.c"
 #include "ft_print_unsigned_decimal.c"
-// #include "ft_print_hexadecimal.c"
+#include "ft_print_hexadecimal.c"
 #include <stdio.h>
 
 //test
@@ -46,7 +46,9 @@ int	main(void)
 
 	// unsigned_number = 4294967295;
 	// ft_printf("print unsigned number: %u", unsigned_number);
-	// hexadecimal_number = 12343443;
+	hexadecimal_number = 12343443;
 	// ft_printf("print unsigned number: %x", unsigned_number);
+	printf ("_%x_\n", hexadecimal_number);
+	ft_printf ("_%x_\n", hexadecimal_number);
 	return (0);
 }
