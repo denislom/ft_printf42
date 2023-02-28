@@ -6,11 +6,11 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 00:24:40 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/26 22:42:07 by dlom             ###   ########.fr       */
+/*   Updated: 2023/02/28 22:09:40 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 /*
 int can hold values from -2^31 to -2^31-1 = 2.147.483.647
 unsigned int can hold values from 0 t 2^32-1 = 4.294.967.295
@@ -28,7 +28,7 @@ static int	unum_len(unsigned int num)
 	return (len);
 }
 
-char *unsigned_itoa(unsigned int num)
+char	*unsigned_itoa(unsigned int num)
 {
 	int		len;
 	char	*number;
@@ -47,7 +47,7 @@ char *unsigned_itoa(unsigned int num)
 	return (number);
 }
 
-int ft_print_unsigned_decimal(unsigned int num)
+int	ft_print_unsigned_decimal(unsigned int num)
 {
 	int		printed_chars;
 	char	*temp;
