@@ -105,16 +105,21 @@ int	print_variable(va_list argptr, char format)
 	num_char = 0;
 	if (format == 'c')
 		num_char = ft_putchar(va_arg(argptr, int));
-	if (format == 's')
+	else if (format == 's')
 		num_char = ft_putstr(va_arg(argptr, char *));
-	if (format == 'p')
+	else if (format == 'p')
 		num_char = ft_print_pointer(va_arg(argptr, uintptr_t));
-	if (format == 'd' || format == 'i')
+	else if (format == 'd' || format == 'i')
 		num_char = ft_print_decimal_number(va_arg(argptr, int));
-	if (format == 'u')
+	else if (format == 'u')
 		num_char = ft_print_unsigned_decimal(va_arg(argptr, unsigned int));
-	if (format == 'x' || format == 'X')
+	else if (format == 'x' || format == 'X')
 		num_char = ft_print_hexadecimal(va_arg(argptr, int), format);
+	else if (format == '%')
+	{
+		num_char = 1;
+		putchar(format);
+	}
 	return (num_char);
 }
 
