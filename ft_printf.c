@@ -123,7 +123,7 @@ int	print_variable(va_list argptr, char format)
 	return (num_char);
 }
 
-int	ft_printf(char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	argptr;
 	int		i;

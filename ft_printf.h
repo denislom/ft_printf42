@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
-int		ft_printf(char *str, ...);
+int		ft_printf(const char *str, ...);
 int		ft_putstr(char	*str);
 int		ft_print_pointer(uintptr_t num);
 char	*ft_itoa(int n);
