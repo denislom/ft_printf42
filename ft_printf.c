@@ -118,7 +118,7 @@ int	print_variable(va_list argptr, char format)
 	else if (format == '%')
 	{
 		num_char = 1;
-		putchar(format);
+		ft_putchar(format);
 	}
 	return (num_char);
 }

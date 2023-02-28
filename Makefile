@@ -10,7 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	
+SRCS		=	ft_printf.c ft_print_decimal_number.c ft_print_hexadecimal.c \
+				ft_print_pointer.c ft_print_unsigned_decimal.c ft_itoa.c \
+				ft_putstr.c
 OBJS		=	${SRCS:.c=.o}
 NAME		=	libftprintf.a
 INCS		=	ft_printf.h
