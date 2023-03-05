@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:05:41 by dlom              #+#    #+#             */
-/*   Updated: 2023/03/05 15:30:01 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 15:35:08 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ int	main(void)
 	char *text3;
 	int	intmax;
 	int	intmin;
+	int	uintmax;
 
 	intmax = 2147483647;
 	intmin = -2147483648;
+	uintmax = 4294967295;
 
 	printf("necessary to test %%c, %%s, %%p, %%d, %%i, %%u, %%x, %%X, %%\n");
 	//TEST 1 %c
@@ -78,19 +80,27 @@ int	main(void)
 	free(text3);
 
 	// TEST 4 %d
-	printf("TEST 3_%%d_______printf\n");
+	printf("TEST 4_%%d_______printf\n");
 	len_printf = printf("Test %d\n", intmax);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
-	printf("TEST 3 %%d ft_printf\n");
+	printf("TEST 4 %%d ft_printf\n");
 	len_printf = ft_printf("Test %d\n", intmax);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
+	printf("TEST 4 %%d printf\n");
 	len_printf = printf("Test %d\n", intmin);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
-	printf("TEST 3 %%d ft_printf\n");
+	printf("TEST 4 %%d ft_printf\n");
 	len_printf = ft_printf("Test %d\n", intmin);
+	printf ("_%d_\n", len_printf);
+	printf("TEST 4 %%d printf\n");
+	len_printf = printf("Test %d\n", uintmax);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 4 %%d ft_printf\n");
+	len_printf = ft_printf("Test %d\n", uintmax);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
 
