@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:05:41 by dlom              #+#    #+#             */
-/*   Updated: 2023/03/05 14:46:30 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 15:30:01 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 int	main(void)
 {
 	char	charac = 'd';
-	char *text = "String1";
+	char *text1 = "String1";
 	int	len;
 	int	len_printf;
 	int	number;
@@ -32,9 +32,14 @@ int	main(void)
 	int	hexadecimal_number;
 	char *text2 = "String2";
 	char *text3;
+	int	intmax;
+	int	intmin;
+
+	intmax = 2147483647;
+	intmin = -2147483648;
 
 	printf("necessary to test %%c, %%s, %%p, %%d, %%i, %%u, %%x, %%X, %%\n");
-	//TEST 1
+	//TEST 1 %c
 	printf("TEST 1 %%c printf\n");
 	len_printf = printf("Test %c\n", charac);
 	printf ("_%d_\n", len_printf);
@@ -43,20 +48,52 @@ int	main(void)
 	len_printf = ft_printf("Test %c\n", charac);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
-	// TEST 2
+	// TEST 2 %s
 	text3 = malloc(0);
 	printf("TEST 2_%%s_______printf\n");
-	// len_printf = printf("Printf \n", charac, text, text2);
+	len_printf = printf("Test %s\n", text3);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
-	printf("TEST 2_%%s_______ft_printf\n");
-	len_printf = ft_printf("printf %c %s %s\n", charac, text, text2);
+	printf("TEST 2 %%s ft_printf\n");
+	len_printf = ft_printf("Test %s\n", text3);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
-	len_printf = printf("Test 3 %c %s %s\n", charac, text, text3);
+
+	printf("TEST 2_%%s_______two strings_printf\n");
+	len_printf = printf("Test %s and %s\n", text1, text2);
 	printf ("_%d_\n", len_printf);
-	len_printf = ft_printf("Test 3 %c %s %s\n", charac, text, text3);
+	len_printf = ft_printf("Test %s and %s\n", text1, text2);
 	printf ("_%d_\n", len_printf);
+	printf("\n");
+	
+	// TEST 3 %p
+	printf("TEST 3_%%p_______printf\n");
+	len_printf = printf("Test %p\n", text3);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 3 %%p ft_printf\n");
+	len_printf = ft_printf("Test %p\n", text3);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	free(text3);
+
+	// TEST 4 %d
+	printf("TEST 3_%%d_______printf\n");
+	len_printf = printf("Test %d\n", intmax);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 3 %%d ft_printf\n");
+	len_printf = ft_printf("Test %d\n", intmax);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	len_printf = printf("Test %d\n", intmin);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 3 %%d ft_printf\n");
+	len_printf = ft_printf("Test %d\n", intmin);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+
 	// number = 20;
 	// len_printf = printf("%c %s %s ahoj fsd.", charac, text, text2);
 	// printf ("_%d_\n", len_printf);
