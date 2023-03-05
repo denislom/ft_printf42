@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 15:22:18 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/18 20:31:51 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 16:02:06 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_putstr(char	*str)
 	int	i;
 
 	i = 0;
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);

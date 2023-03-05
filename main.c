@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:05:41 by dlom              #+#    #+#             */
-/*   Updated: 2023/03/05 15:35:08 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 15:57:33 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main(void)
 	int	intmax;
 	int	intmin;
 	int	uintmax;
+	char *text4;
 
 	intmax = 2147483647;
 	intmin = -2147483648;
@@ -51,6 +52,7 @@ int	main(void)
 	printf ("_%d_\n", len_printf);
 	printf("\n");
 	// TEST 2 %s
+	text4 = NULL;
 	text3 = malloc(0);
 	printf("TEST 2_%%s_______printf\n");
 	len_printf = printf("Test %s\n", text3);
@@ -58,6 +60,14 @@ int	main(void)
 	printf("\n");
 	printf("TEST 2 %%s ft_printf\n");
 	len_printf = ft_printf("Test %s\n", text3);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 2_%%s_______printf\n");
+	len_printf = printf("Test %s\n", text4);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 2 %%s ft_printf\n");
+	len_printf = ft_printf("Test %s\n", text4);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
 
