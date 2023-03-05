@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 00:24:40 by dlom              #+#    #+#             */
-/*   Updated: 2023/02/28 22:09:40 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 16:42:04 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_print_unsigned_decimal(unsigned int num)
 	if (num == 0)
 	{
 		write(1, "0", 1);
-		return (0);
+		return (1);
 	}
 	else
 	{

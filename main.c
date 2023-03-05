@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:05:41 by dlom              #+#    #+#             */
-/*   Updated: 2023/03/05 15:57:33 by dlom             ###   ########.fr       */
+/*   Updated: 2023/03/05 16:40:15 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,29 @@ int	main(void)
 	printf("\n");
 	printf("TEST 4 %%d ft_printf\n");
 	len_printf = ft_printf("Test %d\n", uintmax);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+
+	int number1;
+	int number2;
+	
+	number1 = 0;
+	number2 = 4294967295;
+	// TEST 5 %u
+	printf("TEST 5_%%u_______printf\n");
+	len_printf = printf("Test %u\n", number1);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 5 %%p ft_printf\n");
+	len_printf = ft_printf("Test %u\n", number1);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 5_%%u_______printf\n");
+	len_printf = printf("Test %u\n", number2);
+	printf ("_%d_\n", len_printf);
+	printf("\n");
+	printf("TEST 5 %%p ft_printf\n");
+	len_printf = ft_printf("Test %u\n", number2);
 	printf ("_%d_\n", len_printf);
 	printf("\n");
 
